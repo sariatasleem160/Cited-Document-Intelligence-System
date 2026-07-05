@@ -19,7 +19,6 @@ Companies rely on policies, contracts, SOPs, manuals, and onboarding docs. Teams
 ## Project layout
 
 ```
-02-cited-doc-assistant/
 ├── docs/                      # Source PDF/Markdown documents
 ├── data/
 │   ├── eval_questions.csv     # Evaluation set
@@ -28,7 +27,7 @@ Companies rely on policies, contracts, SOPs, manuals, and onboarding docs. Teams
 ├── chunking.py                # Overlapping text chunks + metadata
 ├── embeddings.py              # Sentence-transformer embeddings
 ├── retrieve.py                # Top-k vector search
-├── answer.py                    # Grounded answers + citations + refusal
+├── answer.py                  # Grounded answers + citations + refusal
 ├── evaluate.py                # Retrieval and answer metrics
 ├── app.py                     # CLI entry point
 ├── results/                   # Evaluation outputs
@@ -39,7 +38,6 @@ Companies rely on policies, contracts, SOPs, manuals, and onboarding docs. Teams
 ## Quick start
 
 ```bash
-cd 02-cited-doc-assistant
 python -m venv .venv
 .venv\Scripts\activate        # Windows
 pip install -r requirements.txt
