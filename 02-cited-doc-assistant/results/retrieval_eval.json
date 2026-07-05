@@ -1,0 +1,107 @@
+{
+  "k": 5,
+  "hit_rate": 1.0,
+  "hits": 9,
+  "total": 9,
+  "details": [
+    {
+      "question": "How many remote work days are allowed per week?",
+      "hit": true,
+      "retrieved_ids": [
+        "remote_work_policy::p0::c0",
+        "remote_work_policy::p0::c1",
+        "onboarding_guide::p0::c1",
+        "remote_work_policy::p0::c2",
+        "security_sop::p0::c2"
+      ]
+    },
+    {
+      "question": "What is the monthly internet stipend for remote employees?",
+      "hit": true,
+      "retrieved_ids": [
+        "remote_work_policy::p0::c2",
+        "remote_work_policy::p0::c0",
+        "remote_work_policy::p0::c1",
+        "vendor_contract::p0::c0",
+        "onboarding_guide::p0::c0"
+      ]
+    },
+    {
+      "question": "What are the core hours for remote employees?",
+      "hit": true,
+      "retrieved_ids": [
+        "remote_work_policy::p0::c1",
+        "remote_work_policy::p0::c0",
+        "onboarding_guide::p0::c0",
+        "onboarding_guide::p0::c1",
+        "security_sop::p0::c1"
+      ]
+    },
+    {
+      "question": "How long must passwords be under the security SOP?",
+      "hit": true,
+      "retrieved_ids": [
+        "security_sop::p0::c0",
+        "security_sop::p0::c2",
+        "security_sop::p0::c1",
+        "onboarding_guide::p0::c1",
+        "remote_work_policy::p0::c1"
+      ]
+    },
+    {
+      "question": "Within how many hours must security incidents be reported?",
+      "hit": true,
+      "retrieved_ids": [
+        "security_sop::p0::c1",
+        "security_sop::p0::c0",
+        "remote_work_policy::p0::c1",
+        "security_sop::p0::c2",
+        "remote_work_policy::p0::c0"
+      ]
+    },
+    {
+      "question": "When must benefits enrollment be completed?",
+      "hit": true,
+      "retrieved_ids": [
+        "onboarding_guide::p0::c0",
+        "onboarding_guide::p0::c1",
+        "onboarding_guide::p0::c2",
+        "vendor_contract::p0::c1",
+        "vendor_contract::p0::c0"
+      ]
+    },
+    {
+      "question": "How long is the probation period for new hires?",
+      "hit": true,
+      "retrieved_ids": [
+        "onboarding_guide::p0::c1",
+        "remote_work_policy::p0::c0",
+        "onboarding_guide::p0::c0",
+        "vendor_contract::p0::c1",
+        "onboarding_guide::p0::c2"
+      ]
+    },
+    {
+      "question": "What uptime does the cloud vendor guarantee?",
+      "hit": true,
+      "retrieved_ids": [
+        "vendor_contract::p0::c0",
+        "onboarding_guide::p0::c2",
+        "remote_work_policy::p0::c1",
+        "vendor_contract::p0::c1",
+        "onboarding_guide::p0::c1"
+      ]
+    },
+    {
+      "question": "Where is customer data stored in the vendor contract?",
+      "hit": true,
+      "retrieved_ids": [
+        "vendor_contract::p0::c0",
+        "remote_work_policy::p0::c1",
+        "vendor_contract::p0::c1",
+        "security_sop::p0::c1",
+        "remote_work_policy::p0::c2"
+      ]
+    }
+  ]
+}
