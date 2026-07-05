@@ -16,6 +16,64 @@ Companies rely on policies, contracts, SOPs, manuals, and onboarding docs. Teams
 - Refusal behavior for unknown questions
 - Separate retrieval and answer evaluation
 
+## Project architecture
+
+```mermaid
+flowchart TB
+    subgraph Input["Document sources"]
+        PDF["PDF files"]
+        MD["Markdown files"]
+    end
+
+    subgraph Ingest["Ingestion pipeline — ingest.py"]
+        Load["Load documents"]
+        Chunk["chunking.py<br/>Overlapping chunks + metadata"]
+        EmbedDoc["embeddings.py<br/>all-MiniLM-L6-v2"]
+        Index[("Vector index<br/>data/index/")]
+    end
+
+    subgraph Query["Question answering — app.py"]
+        Question["User question"]
+        EmbedQ["embeddings.py<br/>Query embedding"]
+        Retrieve["retrieve.py<br/>Top-k vector search"]
+        Answer["answer.py<br/>Grounded answer + citations"]
+        Refuse["Refusal:<br/>I do not know from the provided documents."]
+    end
+
+    subgraph Eval["Evaluation — evaluate.py"]
+        EvalSet["data/eval_questions.csv"]
+        RetMetrics["Retrieval hit-rate @ k"]
+        AnsMetrics["Answer accuracy + citation presence"]
+        Results["results/*.json"]
+    end
+
+    PDF --> Load
+    MD --> Load
+    Load --> Chunk --> EmbedDoc --> Index
+
+    Question --> EmbedQ --> Retrieve
+    Index --> Retrieve
+    Retrieve --> Answer
+    Retrieve --> Refuse
+    Answer --> Response["Answer + source citations"]
+    Refuse --> Response
+
+    EvalSet --> RetMetrics
+    EvalSet --> AnsMetrics
+    Index --> RetMetrics
+    Index --> AnsMetrics
+    RetMetrics --> Results
+    AnsMetrics --> Results
+```
+
+**Flow summary**
+
+| Stage | Modules | Output |
+|-------|---------|--------|
+| Ingest | `ingest.py` → `chunking.py` → `embeddings.py` | Chunk embeddings stored in `data/index/` |
+| Ask | `app.py` → `retrieve.py` → `answer.py` | Grounded answer with citations, or refusal |
+| Evaluate | `evaluate.py` | Retrieval and answer metrics in `results/` |
+
 ## Project layout
 
 ```
