@@ -1,0 +1,11 @@
+{
+  "grounded_answer_accuracy": 1.0,
+  "grounded_correct": 9,
+  "grounded_total": 9,
+  "citation_presence_rate": 1.0,
+  "citation_present": 9,
+  "citation_total": 9,
+  "unknown_refusal_accuracy": 1.0,
+  "refusal_correct": 4,
+  "refusal_total": 4
+}
