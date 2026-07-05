@@ -1,0 +1,14 @@
+question,expected_chunk_substring,answerable,expected_keywords
+How many remote work days are allowed per week?,remote_work_policy,true,three
+What is the monthly internet stipend for remote employees?,remote_work_policy,true,50
+What are the core hours for remote employees?,remote_work_policy,true,10:00 AM|3:00 PM
+How long must passwords be under the security SOP?,security_sop,true,14
+Within how many hours must security incidents be reported?,security_sop,true,one hour
+When must benefits enrollment be completed?,onboarding_guide,true,30 days
+How long is the probation period for new hires?,onboarding_guide,true,90-day
+What uptime does the cloud vendor guarantee?,vendor_contract,true,99.9%
+Where is customer data stored in the vendor contract?,vendor_contract,true,US-East|EU-West
+What is the company's stock ticker symbol?,unknown,false,
+Who won the 2022 FIFA World Cup?,unknown,false,
+What is the CEO's personal phone number?,unknown,false,
+How many vacation days are granted in the first year?,unknown,false,
